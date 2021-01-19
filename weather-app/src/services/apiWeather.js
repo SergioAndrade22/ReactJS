@@ -7,7 +7,9 @@ import {
     DRIZZLY,
 } from '../constants/weathers';
 
-const baseURL = '//api.openweathermap.org/data/2.5/weather';
+const baseURL = '//api.openweathermap.org/data/2.5';
+const currentWeather = '/weather';
+const hourlyForecast = '/forecast';
 const apiKey = 'b1827e0da926bd7cf8d378edf0afba7e';
 const options = 'units=metric';
 
@@ -32,19 +34,24 @@ const getWeatherState = (weather) => {
 
 export const transformWeather = (weatherData) => {
     const {humidity, temp} = weatherData.main;
-    const { speed } = weatherData.wind;
-    const weatherState = getWeatherState(weatherData.weather[0]);
     return {
         humidity,
         temperature: Math.round(temp),
-        wind: `${Math.round(speed * 3.6)} km/h`,
-        weatherState,
+        wind: `${Math.round(weatherData.wind.speed * 3.6)} km/h`,
+        weatherState: getWeatherState(weatherData.weather[0]),
     };
 }
 
 export const getWeatherNow = (city) => {
-    const apiWeather = `${baseURL}?q=${city}&appid=${apiKey}&${options}`;
+    const apiWeather = `${baseURL}${currentWeather}?q=${city}&${options}&appid=${apiKey}`;
     return fetch(apiWeather)
         .then( data => data.json())
+        .catch( err => console.error(err));
+}
+
+export const getWeatherForecast = (city) => {
+    const apiWeather = `${baseURL}${hourlyForecast}?q=${city}&${options}&appid=${apiKey}`;
+    return fetch(apiWeather)
+        .then(data => data.json())
         .catch( err => console.error(err));
 }

@@ -23,7 +23,7 @@ class WeatherLocation extends Component{
     setNowData = () => {
         getWeatherNow(this.state.city).then(weatherData => {
             const data = transformWeather(weatherData);
-            this.setState({ data });
+            this.setState({ city: weatherData.name, data });
         });
     }
 

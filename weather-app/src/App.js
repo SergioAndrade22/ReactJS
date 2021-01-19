@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import './App.css';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import LocationList from './components/LocationListComponent/LocationList';
-import { Paper, AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { Paper} from '@material-ui/core';
 import ForecastExtended from './components/ForecastExtended/ForecastExtended';
+import MyAppBar from './components/shared/MyAppBar';
 
 const cities = [
   "Bahía Blanca, ar",
@@ -34,16 +34,7 @@ class App extends Component {
       <Grid>
         <Row>
           <Col xs={12}>
-            <AppBar position="static">
-              <Toolbar>
-                <IconButton edge="start" className="menuButton" color="inherit" aria-label="menu">
-                  <MenuIcon />
-                </IconButton>
-                <Typography variant="h3" className="title">
-                  Weather APP!
-                </Typography>
-              </Toolbar>
-            </AppBar>
+            <MyAppBar/>
           </Col> 
         </Row>
         <Row>

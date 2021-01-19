@@ -1,12 +1,12 @@
 import React from 'react';
 import WeatherTemperature from './WeatherTemperatue';
 import WeatherExtraInfo from './WeatherExtraInfo';
-import { ValidValues } from '../../../constants/weathers'
+import { ValidValues } from '../../../constants/weathers';
 import PropTypes from 'prop-types';
 
 const MIN = 0;
 const MAX = 100;
-const rangeCheck = function(props, propName, componentName) {
+export const rangeCheck = function(props, propName, componentName) {
     const propType = typeof props[propName];
     if(!(propType === 'number'))
         return new Error(`Error found on ${componentName}, ${propName} must be a number`);

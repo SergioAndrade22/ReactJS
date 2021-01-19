@@ -49,8 +49,10 @@ html{
 }
 
 .detail {
-  background: #999;
-  height: 100vh;
+  background: none;
+  max-height: calc(100vh - 7rem - 4rem);
+  overflow: auto;
+  margin-top: 2rem;
   width: 100%;
 }
 

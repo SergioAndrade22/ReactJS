@@ -1,0 +1,21 @@
+.weatherLocationContainer {
+    width: 100%;
+    min-width: 36rem;
+    margin: 1rem auto;
+    padding: 2rem 1rem;
+    box-shadow: 1rem 1rem 4.2rem -1.2rem rgba(0, 0, 0, .75);
+    background: rgba(180, 180, 240, .2);
+    cursor: pointer;
+}
+
+.locationContainer {
+    width: 100%;
+    height: 3rem;
+    text-align: left;
+    color: #777;
+}
+
+.locationContainer h1 {
+    line-height: inherit;
+    font-size: 2.6rem;
+}

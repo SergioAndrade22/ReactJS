@@ -1,0 +1,7 @@
+.menuButton {
+    transform: scale(2);
+}
+
+.title {
+    margin-left: 2rem !important;
+}

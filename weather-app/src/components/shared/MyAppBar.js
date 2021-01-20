@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import './styles.css';
 
 const MyAppBar = () => {
     return (

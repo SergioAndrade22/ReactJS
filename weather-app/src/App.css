@@ -47,19 +47,3 @@ html{
     transform: rotate(360deg);
   }
 }
-
-.detail {
-  background: none;
-  max-height: calc(100vh - 7rem - 4rem);
-  overflow: auto;
-  margin-top: 2rem;
-  width: 100%;
-}
-
-.menuButton {
-  transform: scale(2);
-}
-
-.title {
-  margin-left: 2rem !important;
-}

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomerData = ({name, dni, age}) => {
+const CustomerData = ({ customer }) => {
     return (
         <div>
             <div className="customer-data">
@@ -9,13 +9,13 @@ const CustomerData = ({name, dni, age}) => {
                     Client Data:
                 </h2>
                     <div>
-                        <strong>Name: </strong><i>{name}</i>
+                        <strong>Nombre: </strong><i>{customer.name}</i>
                     </div>
                     <div>
-                        <strong>DNI: </strong><i>{dni}</i>
+                        <strong>DNI: </strong><i>{customer.dni}</i>
                     </div>
                     <div>
-                        <strong>Age: </strong><i>{age}</i>
+                        <strong>Edad: </strong><i>{customer.age}</i>
                     </div>
             </div>
         </div>
@@ -23,9 +23,7 @@ const CustomerData = ({name, dni, age}) => {
 };
 
 CustomerData.propTypes = {
-    name: PropTypes.string.isRequired,
-    dni: PropTypes.string.isRequired,
-    age: PropTypes.number,
+    customer: PropTypes.object.isRequired,
 };
 
 export default CustomerData;

@@ -4,20 +4,18 @@ import CustomerListItem from './CustomerListItem';
 
 const CustomersList = ({customers, baseURL}) => {
     return (
-        <div>
-            <div className="customers-list">
-                {
-                    customers.map( c => 
-                        <CustomerListItem 
-                            key={c.dni}
-                            customer={c}
-                            editAction={'Edit'}
-                            delAction={'Delete'}
-                            baseURL={baseURL}
-                        />
-                    )
-                }
-            </div>
+        <div className="customers-list">
+            {
+                customers.map( c => 
+                    <CustomerListItem 
+                        key={c.dni}
+                        customer={c}
+                        editAction={'Edit'}
+                        delAction={'Delete'}
+                        baseURL={baseURL}
+                    />
+                )
+            }
         </div>
     );
 };

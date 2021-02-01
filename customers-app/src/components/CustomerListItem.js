@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const CustomerListItem = ({customer, editAction, delAction, baseURL}) => {
     return (
         <div>
-            <div className="customer-list-item">
+            <div className="customers-list-item">
                 <div className="field">
                     <Link to={`${baseURL}${customer.dni}`}>{customer.name}</Link>
                 </div>
@@ -21,7 +21,7 @@ const CustomerListItem = ({customer, editAction, delAction, baseURL}) => {
 };
 
 CustomerListItem.propTypes = {
-    name: PropTypes.string.isRequired,
+    customer: PropTypes.object.isRequired,
     editAction: PropTypes.string.isRequired,
     delAction: PropTypes.string.isRequired,
     baseURL: PropTypes.string.isRequired,

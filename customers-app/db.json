@@ -1,19 +1,52 @@
 {
   "customers": [
     {
-        "dni": "27000000",
-        "name": "Juan Perez",
-        "age": 37
+      "id": "27000000",
+      "dni": "2700014",
+      "name": "Juancito Perez",
+      "age": 36
     },
     {
-        "dni": "30000000",
-        "name": "Otro",
-        "age": 35
+      "id": "30000000",
+      "dni": "30000000",
+      "name": "Otro Más",
+      "age": 35
     },
     {
-        "dni": "33000000",
-        "name": "Luis Martinez",
-        "age": 32
+      "dni": "3300002",
+      "id": "33000000",
+      "name": "LUIS MARTINEZ",
+      "age": 32
+    },
+    {
+      "name": "PRUEBA",
+      "dni": "123465",
+      "age": 12,
+      "id": "S7P79_o"
+    },
+    {
+      "name": "PRUEBA DE CLIENTE",
+      "dni": "12345674",
+      "age": 15,
+      "id": "5TOymb3"
+    },
+    {
+      "name": "PRUEB",
+      "dni": "1245",
+      "age": 123,
+      "id": "9t7063_"
+    },
+    {
+      "name": "SAF",
+      "dni": "234",
+      "age": 1,
+      "id": "gwQOO-B"
+    },
+    {
+      "name": "ASDF",
+      "dni": "124234",
+      "age": 12,
+      "id": "TDDdpNW"
     }
   ],
   "posts": [

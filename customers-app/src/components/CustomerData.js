@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CustomersActions from './CustomersActions';
 
-const CustomerData = ({ customer }) => {
+const CustomerData = ({ customer, onBack }) => {
     return (
         <div>
             <div className="customer-data">
@@ -17,13 +18,17 @@ const CustomerData = ({ customer }) => {
                     <div>
                         <strong>Edad: </strong><i>{customer.age}</i>
                     </div>
+                    <CustomersActions>
+                        <button onClick={onBack}>Volver</button>
+                    </CustomersActions>
             </div>
         </div>
     );
 };
 
 CustomerData.propTypes = {
-    customer: PropTypes.object.isRequired,
+    customer: PropTypes.object,
+    onBack: PropTypes.func.isRequired,
 };
 
 export default CustomerData;

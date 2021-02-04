@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Person from './components/Person/Person';
-import './App.css';
+import People from './components/People/People';
+import classes from './App.css';
+import Cockpit from './components/Cockpit.js/Cockpit';
 
 class App extends Component {
   state = {
@@ -39,28 +40,12 @@ class App extends Component {
 
   render = () => {
     let people = null;
-
     if (this.state.display){
-      people = (
-        <div>
-          {
-            this.state.people.map((p, index) => 
-              <Person click={() => this.deletePerson(index)} 
-                      onChange={(event) => this.onNameChange(event, p.id)}
-                      key={p.id} 
-                      name={p.name} 
-                      age={p.age}/>
-            )
-          }
-        </div>
-      );
+      people = <People people={this.state.people} clicked={this.deletePerson} changed={this.onNameChange}/>
     }
-
     return (
-        <div className="App">
-          <h1>Hi, I'm a React App</h1>
-          <p>This really works!</p>
-          <button onClick={this.togglePeople}>Display People!</button>
+        <div className={classes.App}>
+          <Cockpit toggle={this.togglePeople}/>
           {people}
         </div>
     );

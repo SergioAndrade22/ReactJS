@@ -1,12 +1,21 @@
 import React from 'react';
 import classes from './ButtonsPanel.module.css';
 
-const ButtonsPanel = ({label}) => {
+const ButtonsPanel = ({label, more, less, disabledButton}) => {
     return (
         <div className={classes.ButtonsPanel}>
             <div className={classes.Label}>{label}</div>
-            <button className={classes.Less}>Less</button>
-            <button className={classes.More}>More</button>
+            <button disabled={disabledButton} 
+                    className={classes.Less} 
+                    onClick={less}
+                >
+                Less
+            </button>
+            <button className={classes.More} 
+                    onClick={more}
+                >
+                More
+            </button>
         </div>
     );
 };

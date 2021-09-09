@@ -1,0 +1,32 @@
+.widget {
+    width: 100%;
+    background-color: $light-blue;
+    margin-bottom: $xl-size;
+    border-radius: .7rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        background-color: $blue;
+        color: $off-white;
+        padding: $m-size;
+        border-top-left-radius: .7rem;
+        border-top-right-radius: .7rem;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__message {
+        color:$off-white;
+        text-align: center;
+        margin: 0;
+        padding: $l-size;
+        border-bottom: 1px solid lighten($light-blue, 10%);
+    }
+
+    @media (max-width: $bp-desk) {
+        margin-bottom: $m-size;     
+    }
+}

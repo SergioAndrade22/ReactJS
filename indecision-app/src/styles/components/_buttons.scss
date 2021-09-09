@@ -1,0 +1,33 @@
+.button {
+    background-color: $purple;
+    border: none;
+    border-bottom: .3rem solid darken($purple, 10%);
+    font-weight: 500;
+    padding: $s-size;
+    color: white;
+    border-radius: .7rem;
+
+    &--big {
+        border-bottom: .6rem solid darken($purple, 10%);
+        font-weight: bold;
+        font-size: $l-size;
+        width: 100%;
+        margin-bottom: $xl-size;
+        padding: 2.4rem;
+
+        &:disabled {
+            opacity: .5;
+        }
+
+        @media (max-width: $bp-desk) {
+            margin-bottom: $m-size;     
+        }
+    }
+
+    &--link {
+        background: none;
+        border-bottom: none;
+        color: $off-white;
+        padding: 0;
+    }
+}
